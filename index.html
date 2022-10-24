@@ -12,43 +12,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <img src="./assets/logo.svg" alt="logo les petits plats" />
-      <h1>Les petits plats</h1>
-    </header>
-    <section class="search"></section>
-    <section class="items-container">
-      <!-- <article class="item">
-        <div class="item-img">
-          <img src="./assets/dummy_600x400_ffffff_cccccc.png" alt="" />
+    <div class="container">
+      <header class="header">
+        <img src="./assets/logo.svg" alt="logo les petits plats" />
+        <h1>Les petits plats</h1>
+      </header>
+      <section class="search-section">
+        <div class="input-section">
+          <label for="search" class="label-search"
+            >Rechercher une recette</label
+          >
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Rechercher une recette"
+            class="input-search"
+          />
+          <img src="./assets/search.svg" alt="" class="img-search" />
         </div>
-        <div class="item-content">
-          <div class="item-content-header">
-            <h2>Limonade coco</h2>
-            <div class="time">
-              <img src="./assets/clock.svg" alt="" />
-              <span>60 min</span>
-            </div>
-          </div>
-          <div class="item-content-desc">
-            <div class="ingredients">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolores itaque ab ea harum aut perferendis nulla ducimus maiores
-                assumenda. Vel!
-              </p>
-            </div>
-            <div class="text-description">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
-                eum quidem iste accusantium pariatur magnam asperiores placeat
-                possimus provident dolorum.
-              </p>
-            </div>
-          </div>
+        <div class="btns-section">
+          <button class="filter-btn" type="button" data-id="ingredients">
+            <p>Ingredients</p>
+            <img src="./assets/chevron.svg" alt="" />
+          </button>
+          <button class="filter-btn" type="button" data-id="appareils">
+            <p>Appareils</p>
+            <img src="./assets/chevron.svg" alt="" />
+          </button>
+          <button class="filter-btn" type="button" data-id="ustensils">
+            <p>Ustensiles</p>
+            <img src="./assets/chevron.svg" alt="" />
+          </button>
         </div>
-      </article> -->
-    </section>
-    <script src="app.js" type="module"></script>
+      </section>
+      <section class="items-container"></section>
+      <script src="app.js" type="module"></script>
+    </div>
   </body>
 </html>

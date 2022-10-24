@@ -9,6 +9,7 @@ Variables
   --clr-green: #68d9a4;
   --clr-red: #ed6454;
   --clr-grey: #e7e7e7;
+  --clr-white: #fff;
   --clr-grey-gradient: linear-gradient(
     180deg,
     rgba(231, 231, 231, 0.5) 0%,
@@ -42,6 +43,12 @@ body {
   margin: 30px 0;
 }
 
+.container {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 /* 
 ==============
 Header
@@ -59,9 +66,84 @@ Header
 
 /* 
 ===============
-Section search
+Section search input
 ===============
  */
+.input-section {
+  position: relative;
+  margin: 1.25rem 0;
+}
+
+.label-search {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.input-search {
+  width: 100%;
+  background-color: var(--clr-grey);
+  padding: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-medium);
+}
+
+::placeholder {
+  font-size: var(--fs-medium);
+  font-family: var(--ff-primary);
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.img-search {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 2rem;
+}
+
+/* 
+===============
+Section search btns
+===============
+ */
+
+.btns-section {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 11rem;
+  background-color: var(--clr-blue);
+  padding: 1.5rem;
+  margin-right: 1.25rem;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.filter-btn[data-id='appareils'] {
+  background-color: var(--clr-green);
+}
+.filter-btn[data-id='ustensils'] {
+  background-color: var(--clr-red);
+}
 
 /* 
  ================
@@ -72,11 +154,10 @@ Section search
 .items-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-  /* grid-template-columns: repeat(3, 1fr); */
   gap: 50px;
-  width: 90vw;
+  /* width: 90vw;
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 0 auto; */
 }
 
 .item {
@@ -126,6 +207,7 @@ Section search
 .item-content-header h2 {
   font-size: var(--fs-medium);
   font-family: var(--ff-primary);
+  font-weight: var(--fw-light);
   width: 70%;
 }
 
@@ -145,6 +227,7 @@ Section search
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  font-size: var(--fs-small);
 }
 
 .text-description {
@@ -153,9 +236,11 @@ Section search
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+  font-family: var(--ff-secondary);
 }
 
 .ingredients-list {
   list-style: none;
   width: 50%;
+  font-family: var(--ff-primary);
 }
